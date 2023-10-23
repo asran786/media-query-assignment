@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        height: 90vh;
+ border: 2px solid black;
+ padding: 10px;
+ display: grid;
+ grid-template-columns: repeat(6,1fr);
+ grid-template-rows: repeat(2,1fr);
+grid-template-areas: 
+'BOX1 BOX2 BOX2 BOX2 BOX2 BOX4'
+'BOX1 BOX3 BOX3 BOX3 BOX3 BOX4'
+    }
+    .box-1{
+      background-color: black;
+     color: white;
+     grid-area: BOX1;
+    }
+    .box-2{
+      background-color:aqua;
+      grid-area: BOX2;
+    }
+    .box-3{
+      background-color:rgb(250, 175, 76);
+      grid-area: BOX3;
+    }
+    .box-4{
+      background-color: black;
+      color: white;
+      grid-area: BOX4;
+    }
+
+    @media (max-width:550px) {
+.container{
+ display: grid;
+ grid-template-columns: repeat(1,1fr);
+ grid-template-rows: repeat(6,1fr);
+padding: 0;
+row-gap: 0;
+column-gap: 0;
+ 
+    }
+.box{
+    height: 120px;
+    width: 100%;
+}
+    .box-1{
+      background-color: black;
+     color: white;
+     grid-row: 1/1;
+     grid-column: span 1;
+    }
+    .box-2{
+      background-color:aqua;
+      grid-row: 2/2;
+      grid-column: span 1;
+    }
+    .box-3{
+      background-color:rgb(250, 175, 76);
+      grid-row: 3/3;
+      grid-column: span 1;
+    }
+    .box-4{
+      background-color: black;
+      color: white;
+      grid-row: 6/6;
+      grid-column: span 1;
+    }
+}
+</style>
+<body>
+    <div class="container">
+        <div class="box  box-1">
+   <h1>Box-1</h1>
+        </div>
+        <div class="box  box-2">
+<h1>Box-2</h1>
+        </div>
+        <div class="box  box-3">
+<h1>Box-3</h1>
+        </div>
+        <div class="box  box-4">
+           <h1>Box-4</h1>
+        </div>
+    </div>
+</body>
+</html>

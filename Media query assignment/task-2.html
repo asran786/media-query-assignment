@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+   height: 100vh;
+  column-gap: 10px;
+   border: 2px solid black;
+   padding: 20px;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(3,1fr);
+   
+    }
+    .img{
+    
+        background-image: url("https://fastly.picsum.photos/id/344/200/300.jpg?hmac=hFZM-uJoRMyNATe_kjGvS2NGGP60jqqP64vpGQ98VAo");
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+    @media (max-width:702px) {
+        .container{
+   height: 100vh;
+  column-gap: 10px;
+  row-gap: 10px;
+   border: 2px solid black;
+   padding: 20px;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-rows: repeat(4,1fr);
+   
+    }
+
+.img{
+    background-image: url("https://fastly.picsum.photos/id/344/200/300.jpg?hmac=hFZM-uJoRMyNATe_kjGvS2NGGP60jqqP64vpGQ98VAo");
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+}
+
+    }
+    @media (max-width:478px) {
+        .container{
+    display: grid;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+    border: none;
+    padding: 20px;
+     grid-template-columns: repeat(1,1fr);
+ 
+   
+    }
+
+.img{
+    background-image: url("https://fastly.picsum.photos/id/344/200/300.jpg?hmac=hFZM-uJoRMyNATe_kjGvS2NGGP60jqqP64vpGQ98VAo");
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-column: span 1;
+        height: 300px;
+     
+}
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="img-1 img">
+          
+        </div>
+        <div class="img-2 img">
+          
+        </div>
+        <div class="img-3 img">
+           
+        </div>
+    </div>
+</body>
+</html>

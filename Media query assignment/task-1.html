@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .responsive-header{
+        background-color: cadetblue;
+        height: 70px;
+        position: relative;
+        display: flex;
+    }
+    h1{
+       position: absolute;
+       left: 40%;
+      align-self: center;
+        
+    }
+    @media (max-width:588px) {
+        .responsive-header{
+        background-color: blue;
+       
+        height: 70px;
+        position: relative;
+        display: flex;
+       
+    }  
+    h1{
+       position: absolute;
+       left: 30%;
+      align-self: center;
+        
+    }
+        
+    }
+</style>
+<body>
+       <div class="responsive-header">
+        <h1>Responsive header</h1>
+       </div>
+       <main>main</main>
+       <footer>footer</footer>
+</body>
+</html>
